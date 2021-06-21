@@ -2,3 +2,11 @@
   font-family: sans-serif;
   text-align: center;
 }
+.link-active {
+  color: midnightblue;
+}
+nav > ul,
+nav > ul > ul {
+  list-style: none;
+  text-align: left;
+}

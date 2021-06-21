@@ -1,19 +1,25 @@
 import { useParams } from "react-router";
 import { getAllMajorScales, getAllMinorScales } from "../helpers/getScales";
-
+const majorScales = getAllMajorScales();
+const minorScales = getAllMinorScales();
 export const KeySelect = () => {
   const { type } = useParams();
-  return <div>{getChildren(type)}</div>;
+  return (
+    <div>
+      {Object.entries(getScales(type)).map((item) => JSON.stringify(item[1]))}
+    </div>
+  );
 };
-const getChildren = (type) => {
+
+const getScales = (type) => {
   switch (type) {
     case "minor":
-      return <>{JSON.stringify(getAllMajorScales())}</>;
+      return majorScales;
     case "major":
-      return <>{JSON.stringify(getAllMinorScales())}</>;
+      return minorScales;
     case "all":
     default:
-      return type;
+      return { majorScales, minorScales };
   }
 };
 export default KeySelect;

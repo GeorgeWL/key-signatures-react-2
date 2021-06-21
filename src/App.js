@@ -15,20 +15,29 @@ export default function App() {
         <nav className="nav">
           <ul>
             <li>
-              <NavLink to="/keys">All Keys</NavLink>
+              <NavLink to="/" activeClassName="link-active">
+                All Keys
+              </NavLink>
             </li>
-            <li>
-              <NavLink to="/keys/major">Major Keys</NavLink>
-            </li>
-            <li>
-              <NavLink to="/keys/minor">Minor Keys</NavLink>
-            </li>
+
+            <ul>
+              <li>
+                <NavLink to="/major" activeClassName="link-active">
+                  Major Keys
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/minor" activeClassName="link-active">
+                  Minor Keys
+                </NavLink>
+              </li>
+            </ul>
           </ul>
         </nav>
         <main>
           <h1>Hello CodeSandbox</h1>
           <Switch>
-            <Route exact path="/keys/:type">
+            <Route exact path="/:type">
               <KeySelect />
             </Route>
           </Switch>
