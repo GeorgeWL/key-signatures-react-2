@@ -6,7 +6,9 @@ export const KeySelect = () => {
   const { type } = useParams();
   return (
     <div>
-      {Object.entries(getScales(type)).map((item) => JSON.stringify(item[1]))}
+      {Object.entries(getScales(type)).map((item) =>
+        JSON.stringify(Object.keys(item[1]))
+      )}
     </div>
   );
 };

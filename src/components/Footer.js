@@ -1,7 +1,6 @@
 export default () => (
   <footer>
     <div
-      class="float"
       style={{
         fontFamily:
           "'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
@@ -35,7 +34,6 @@ export default () => (
       >
         Project by
         <a
-          class="link"
           href="https://georgewl.dev"
           style={{ padding: "0 5px" }}
           target="_blank"
