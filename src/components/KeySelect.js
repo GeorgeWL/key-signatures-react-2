@@ -1,9 +1,7 @@
-import { useParams } from "react-router";
 import { getAllMajorScales, getAllMinorScales } from "../helpers/getScales";
 const majorScales = getAllMajorScales();
 const minorScales = getAllMinorScales();
-export const KeySelect = () => {
-  const { type } = useParams();
+export const KeySelect = ({ type }) => {
   return (
     <div>
       {Object.entries(getScales(type)).map((item) =>
