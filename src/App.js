@@ -1,14 +1,13 @@
 import Footer from "./components/Footer";
-import KeySelect from "./components/KeySelect";
 import "./styles.css";
 
 export default function App() {
   return (
     <div className="App">
-      <main>
+      <header>
         <h1>Hello CodeSandbox</h1>
-        <KeySelect />
-      </main>
+      </header>
+      <main>{/* Stuff here */}</main>
       <Footer />
     </div>
   );
