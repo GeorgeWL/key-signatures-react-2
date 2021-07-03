@@ -22,7 +22,7 @@ const CircleKeyButtonItem = ({ item, itemKey }) =>
   getKeyValuesFromObject(item[itemKey]).map((entry) => {
     const { label, value } = entry;
     return (
-      <div>
+      <div key={"key-" + itemKey + "-chord" + label}>
         <h2>
           <small>{label}</small>
         </h2>
@@ -39,12 +39,6 @@ const CircleKeyButtonItem = ({ item, itemKey }) =>
             </span>
           ))}
         </div>
-        {/* {item.equivalents && item.equivalents[itemKey] && (
-          <>
-            <hr />
-            <CircleKeyButtonItem item={item.equivalents} itemKey={itemKey} />
-          </>
-        )} */}
       </div>
     );
   });
