@@ -1,7 +1,8 @@
 import { CircleOfFifthsKeys } from "../../helpers/getScales";
 import CircleKeyButtons from "./CircleKeyButtons";
+import styles from "../../styles/circleList.module.scss";
 const CircleBody = () => (
-  <ul>
+  <ul className={styles.list}>
     {CircleOfFifthsKeys.map((item, index) => (
       <li key={index + "-note"}>
         <CircleKeyButtons

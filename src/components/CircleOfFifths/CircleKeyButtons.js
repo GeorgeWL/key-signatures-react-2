@@ -1,5 +1,5 @@
 import classNames from "classnames";
-
+import styles from "../../styles/key.module.scss";
 const getKeyValuesFromObject = (object) => {
   return Object.entries(object).map((entry) => {
     const [label, value] = entry;
@@ -8,41 +8,44 @@ const getKeyValuesFromObject = (object) => {
 };
 const CircleKeyButton = ({ item, onClick }) => {
   return (
-    <>
-      <button>
+    <button className={styles.keyButton}>
+      <div className={styles.keyColumn}>
         <CircleKeyButtonItem item={item} itemKey="major" />
-      </button>
-      <button>
+      </div>
+      <div className={styles.keyColumn}>
         <CircleKeyButtonItem item={item} itemKey="minor" />
-      </button>
-    </>
+      </div>
+    </button>
   );
 };
 const CircleKeyButtonItem = ({ item, itemKey }) =>
   getKeyValuesFromObject(item[itemKey]).map((entry) => {
     const { label, value } = entry;
     return (
-      <>
+      <div>
         <h2>
           <small>{label}</small>
         </h2>
-        {value.map((keyName) => (
-          <span
-            className={classNames("key", {
-              "key-black": keyName.includes("b") || keyName.includes("#")
-            })}
-            key={"key-" + keyName + "-chord" + label}
-          >
-            {keyName}
-          </span>
-        ))}
-        {item.equivalents && item.equivalents[itemKey] && (
+        <div className={styles.keyboard}>
+          {value.map((keyName) => (
+            <span
+              className={classNames(styles.key, {
+                [styles.keyBlack]:
+                  keyName.includes("b") || keyName.includes("#")
+              })}
+              key={"key-" + keyName + "-chord" + label}
+            >
+              {keyName}
+            </span>
+          ))}
+        </div>
+        {/* {item.equivalents && item.equivalents[itemKey] && (
           <>
             <hr />
             <CircleKeyButtonItem item={item.equivalents} itemKey={itemKey} />
           </>
-        )}
-      </>
+        )} */}
+      </div>
     );
   });
 
