@@ -1,3 +1,4 @@
+import CircleBody from "./components/CircleOfFifths/CircleBody";
 import Footer from "./components/Footer";
 import "./styles.css";
 
@@ -7,7 +8,9 @@ export default function App() {
       <header>
         <h1>Hello CodeSandbox</h1>
       </header>
-      <main>{/* Stuff here */}</main>
+      <main>
+        <CircleBody />
+      </main>
       <Footer />
     </div>
   );
