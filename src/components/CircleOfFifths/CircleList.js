@@ -5,11 +5,6 @@ import { useLocation } from "react-router";
 import classNames from "classnames";
 const CircleBody = () => {
   let location = useLocation();
-  console.log({
-    pathname: location.pathname,
-    isMatch: location.pathname.includes("chord")
-  });
-
   return (
     <ul
       className={classNames(styles.list, {

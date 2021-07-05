@@ -1,9 +1,10 @@
-import { NavLink, useRouteMatch } from "react-router-dom";
+import { NavLink, useLocation, useRouteMatch } from "react-router-dom";
 import styles from "../styles/navigation.module.scss";
 const Navigation = () => {
-  let isMatch = useRouteMatch("/");
+  let location = useLocation();
+  let isMatch = location.pathname === "/";
   return (
-    <nav>
+    <nav className={styles.nav}>
       {!isMatch && (
         <ul>
           <li>
