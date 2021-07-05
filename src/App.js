@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ChordCard from "./components/ChordCard";
 import CircleList from "./components/CircleOfFifths/CircleList";
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
@@ -16,6 +17,9 @@ export default function App() {
           <Switch>
             <Route exact path="/">
               <CircleList />
+            </Route>
+            <Route path="/chord">
+              <ChordCard />
             </Route>
           </Switch>
         </main>
