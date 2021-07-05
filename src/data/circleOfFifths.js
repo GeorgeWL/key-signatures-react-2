@@ -7,9 +7,6 @@ export const getMajorMinorNotes = (major, minor, equivalents) => ({
 });
 
 export const CircleOfFifthsKeys = [
-  getMajorMinorNotes("C major", "A minor"),
-  getMajorMinorNotes("G major", "E minor"),
-  getMajorMinorNotes("D major", "B minor"),
   getMajorMinorNotes("A major", "F# minor"),
   getMajorMinorNotes("E major", "C# minor"),
   getMajorMinorNotes(
@@ -30,5 +27,8 @@ export const CircleOfFifthsKeys = [
   getMajorMinorNotes("Ab major", "F minor"),
   getMajorMinorNotes("Eb major", "C minor"),
   getMajorMinorNotes("Bb major", "G minor"),
-  getMajorMinorNotes("F major", "D minor")
+  getMajorMinorNotes("F major", "D minor"),
+  getMajorMinorNotes("C major", "A minor"),
+  getMajorMinorNotes("G major", "E minor"),
+  getMajorMinorNotes("D major", "B minor")
 ];
