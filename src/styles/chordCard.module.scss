@@ -1,0 +1,20 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: grey;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: .5;
+}
+.modal{
+  position: relative;
+  display: flex;
+  width: 200px;
+  z-index: 2;
+  background: white;
+}

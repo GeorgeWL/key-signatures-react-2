@@ -39,8 +39,13 @@
   @include on-circle($item-count: 12, $circle-size: 605px, $item-size: 135px); 
   margin: 6em auto 0;
   padding: 0 0 0 0;
+  z-index: 0;
   li{
     display: flex; 
     flex-direction: row;
   }
+}
+.listBackground {
+  opacity: .2;
+  pointer-events: none;
 }

@@ -15,13 +15,11 @@ export default function App() {
         </header>
         <main>
           <Switch>
-            <Route exact path="/">
-              <CircleList />
-            </Route>
             <Route path="/chord">
               <ChordCard />
-            </Route>
-          </Switch>
+            </Route>{" "}
+          </Switch>{" "}
+          <CircleList />
         </main>
         <Footer />
       </div>
