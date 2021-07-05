@@ -1,4 +1,4 @@
-import { NavLink, useLocation, useRouteMatch } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import styles from "../styles/navigation.module.scss";
 const Navigation = () => {
   let location = useLocation();
@@ -13,7 +13,7 @@ const Navigation = () => {
               activeClassName={styles["navLink-active"]}
               className={styles.navLink}
             >
-              Go Back
+              Close
             </NavLink>
           </li>
         </ul>

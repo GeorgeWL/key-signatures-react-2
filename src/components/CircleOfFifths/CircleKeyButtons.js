@@ -3,15 +3,14 @@ import styles from "../../styles/key.module.scss";
 
 const CircleKeyButton = ({ item }) => {
   const { major, minor } = item;
-  const path = `/chord?major=${encodeURIComponent(major.label)}&minor=${
-    minor.label
-  }`;
+  const encodedMajorLabel = encodeURIComponent(major.label);
+  const encodedMinorLabel = encodeURIComponent(minor.label);
+  const path = `/chord?major=${encodedMajorLabel}&minor=${encodedMinorLabel}`;
   return (
     <Link className={styles.keyButton} to={path}>
       <div className={styles.keyColumn}>
         <CircleKeyButtonItem item={item} itemKey="major" />
       </div>
-      <hr />
       <div className={styles.keyColumn}>
         <CircleKeyButtonItem item={item} itemKey="minor" />
       </div>

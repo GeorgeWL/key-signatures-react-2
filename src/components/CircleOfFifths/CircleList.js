@@ -1,25 +1,16 @@
 import { CircleOfFifthsKeys } from "../../data/circleOfFifths";
-import CircleKeyButtons from "./CircleKeyButtons";
 import styles from "../../styles/circleList.module.scss";
-import { useLocation } from "react-router";
-import classNames from "classnames";
-const CircleBody = () => {
-  let location = useLocation();
-  return (
-    <ul
-      className={classNames(styles.list, {
-        [styles.listBackground]: location.pathname.includes("chord")
-      })}
-    >
-      {CircleOfFifthsKeys.map((item, index) => (
-        <li key={index + "-note"}>
-          <CircleKeyButtons
-            item={item}
-            onClick={(x, y) => console.log("No Handler", { x, y })}
-          />
-        </li>
-      ))}
-    </ul>
-  );
-};
-export default CircleBody;
+import CircleKeyButtons from "./CircleKeyButtons";
+const CircleList = () => (
+  <ul className={styles.list}>
+    {CircleOfFifthsKeys.map((item, index) => (
+      <li key={index + "-note"}>
+        <CircleKeyButtons
+          item={item}
+          onClick={(x, y) => console.log("No Handler", { x, y })}
+        />
+      </li>
+    ))}
+  </ul>
+);
+export default CircleList;

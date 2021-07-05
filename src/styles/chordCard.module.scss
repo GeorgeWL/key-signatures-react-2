@@ -10,6 +10,8 @@
   bottom: 0;
   right: 0;
   opacity: .5;
+  pointer-events: none;
+  user-select: none;
 }
 .modal{
   position: relative;

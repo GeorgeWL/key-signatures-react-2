@@ -36,16 +36,16 @@
   }
 }
 .list {
-  @include on-circle($item-count: 12, $circle-size: 605px, $item-size: 135px); 
-  margin: 6em auto 0;
+  @include on-circle($item-count: 12, $circle-size: 700px, $item-size: 120px); 
+  margin: 5em auto 0;
   padding: 0 0 0 0;
   z-index: 0;
+  position: relative;
   li{
-    display: flex; 
-    flex-direction: row;
+    display: block; 
+    backdrop-filter: blur(16px);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10%;
+    border: 1px solid rgba(255, 255, 255, 0.125);
   }
-}
-.listBackground {
-  opacity: .2;
-  pointer-events: none;
 }
