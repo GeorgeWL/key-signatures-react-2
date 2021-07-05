@@ -36,8 +36,8 @@
   }
 }
 .list {
-  @include on-circle($item-count: 12, $circle-size: 1000px, $item-size: 280px); 
-  margin: 15em auto 0;
+  @include on-circle($item-count: 12, $circle-size: 605px, $item-size: 135px); 
+  margin: 6em auto 0;
   padding: 0 0 0 0;
   li{
     display: flex; 

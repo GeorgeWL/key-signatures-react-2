@@ -1,0 +1,9 @@
+.nav{
+  list-style: none;
+}
+.navLink{
+  background: hotpink;
+  &-active{
+    background: teal;
+  }
+}

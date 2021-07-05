@@ -1,4 +1,4 @@
-import { CircleOfFifthsKeys } from "../../helpers/getScales";
+import { CircleOfFifthsKeys } from "../../data/circleOfFifths";
 import CircleKeyButtons from "./CircleKeyButtons";
 import styles from "../../styles/circleList.module.scss";
 const CircleBody = () => (

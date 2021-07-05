@@ -1,8 +1,8 @@
 import Scale from "@tonaljs/scale";
 export const getScaleNotes = (scaleName) => Scale.get(scaleName).notes;
 export const getMajorMinorNotes = (major, minor, equivalents) => ({
-  major: { [major ?? ""]: getScaleNotes(major) },
-  minor: { [minor ?? ""]: getScaleNotes(major).sort() },
+  major: { label: major ?? "", notes: getScaleNotes(major) },
+  minor: { label: minor ?? "", notes: getScaleNotes(major).sort() },
   equivalents
 });
 
