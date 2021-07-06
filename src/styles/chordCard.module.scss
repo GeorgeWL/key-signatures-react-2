@@ -4,7 +4,7 @@
   align-items: center;
   background: grey;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   bottom: 0;
@@ -16,7 +16,12 @@
 .modal{
   position: relative;
   display: flex;
-  width: 200px;
+  width: 400px;
   z-index: 2;
   background: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  pointer-events: all;
+  user-select: none;
 }
