@@ -5,20 +5,28 @@
   display: inline-flex;
   border: 1px solid;
   border-radius: 4px;
-  width: 25px;
-  height: 50px;
+  width: 20px;
+  height: 60px;
   text-align: center;
   justify-content: center;
   align-items: flex-start;
   position: relative;
+  text-transform: capitalize
+}
+.keyLabel{
+  transform: rotate(90deg) translateX(30%);
+  font-size: .75em;
+  width: 25px;
 }
 .keyBlack {
   background: black;
   color: white;
-  height: 45px;
+  height: 40px;
 }
 .keyActive{
-  background: blue;
+ & .keyLabel{
+  background: rgba(blue, $alpha: 0.2);
+ }
 }
 .keyButton{
   height: fit-content;
@@ -26,12 +34,10 @@
   border: none;
   border-radius: 4px;
 }
-.keyColumn{
-  display: flex;
-  flex-direction: column;
-  margin: 0 5px;
-}
 .keyboard{
   display: flex;
   flex-direction: row;
+  margin: 10px;
+  border: 2px solid #aaaaaa;
+  border-radius: 5px;
 }

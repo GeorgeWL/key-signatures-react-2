@@ -20,21 +20,23 @@ const KeyboardKeys = ({ activeNotes = [] }) => {
   const synth = new Tone.PolySynth().toDestination();
   // set the attributes across all the voices using 'set'
   synth.set({ detune: -1200 });
+  const handleClickNote = (note) => synth.triggerAttackRelease(note + "4", 1);
   return (
-    <div>
+    <div className={styles.keyboard}>
       {notes.map((noteName) => {
         const [note] = noteName.split("/");
         const isBlackKey = note.includes("#");
         return (
           <button
-            onClick={() => synth.triggerAttackRelease(note + "4", 1)}
+            onClick={({ target: { value } }) => handleClickNote(value)}
+            value={note}
             className={classNames(
               styles.key,
               isBlackKey && styles.keyBlack,
-              activeNotes.includes(noteName) && styles.keyActive
+              activeNotes.includes(note) && styles.keyActive
             )}
           >
-            {noteName}
+            <label className={styles.keyLabel}>{noteName}</label>
           </button>
         );
       })}
